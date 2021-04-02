@@ -90,6 +90,7 @@ export const afterware = new ApolloLink( ( operation, forward ) => {
 } );
 
 // Apollo GraphQL client.
+console.log('process.env.GATSBY_WORDPRESS_SITE_URL', process.env.GATSBY_WORDPRESS_SITE_URL)
 export const client = new ApolloClient({
 	link: middleware.concat( afterware.concat( createHttpLink({
 		uri: `${process.env.GATSBY_WORDPRESS_SITE_URL}/graphql`,

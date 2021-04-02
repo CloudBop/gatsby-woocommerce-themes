@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const GET_PRODUCTS = gql`
     query GET_PRODUCTS( $include: [Int] ){
-	products(where: {include: $include}) {
+			products(where: {include: $include}) {
 	    edges {
 	      node {
 	        id

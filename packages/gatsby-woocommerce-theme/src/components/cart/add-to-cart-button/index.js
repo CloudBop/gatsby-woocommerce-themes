@@ -53,8 +53,9 @@ const AddToCart = (props) => {
 
       // On Success:
       // 1. Make the GET_CART query to update the cart with new values in React context.
-      refetch();
-
+      const refetch = useCallback(() => { setTimeout(() => refetch(), 0) }, [refetch])
+      // refetch();
+  
       // 2. Show View Cart Button
       setShowViewCart(true);
     },

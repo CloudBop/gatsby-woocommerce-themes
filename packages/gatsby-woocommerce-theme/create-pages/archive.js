@@ -100,9 +100,5 @@ module.exports = async ( { actions, graphql } ) => {
 				},
 			} );
 		});
-
-
-
 	} )
-
 };
